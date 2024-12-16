@@ -1,11 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Header } from '../components/Header'
-import { InterlocutorList } from '../components/InterlocutorList'
-import { SegmentList } from '../components/SegmentList'
-import { GlobalControls } from '../components/GlobalControls'
-import { ErrorMessage } from '../components/ErrorMessage'
+
+import { Header } from '@/components/Header'
+import { InterlocutorList } from '@/components/InterlocutorList'
+import { SegmentList } from '@/components/SegmentList'
+import { GlobalControls } from '@/components/GlobalControls'
+import { ErrorMessage } from '@/components/ErrorMessage'
 
 // Tipos de datos actualizados
 type Voice = {

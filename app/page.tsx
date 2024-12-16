@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import { Mic, Globe, Speaker, Download } from 'lucide-react'
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Mic, Globe, Speaker, Download } from 'lucide-react'
-import { HeroSection } from './components/HeroSection'
-import { FeaturesSection } from './components/FeaturesSection'
-import { ExamplesSection } from './components/ExamplesSection'
+import { HeroSection } from '@/components/HeroSection'
+import { FeaturesSection } from '@/components/FeaturesSection'
+import { ExamplesSection } from '@/components/ExamplesSection'
 
 const features = [
   {

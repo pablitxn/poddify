@@ -1,12 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { Header } from '../components/Header'
-import { ProfileSection } from '../components/settings/ProfileSection'
-import { PreferencesSection } from '../components/settings/PreferencesSection'
-import { NotificationsSection } from '../components/settings/NotificationsSection'
-import { SecuritySection } from '../components/settings/SecuritySection'
-import { DeleteAccountSection } from '../components/settings/DeleteAccountSection'
+
+import { Header } from '@/components/Header'
+import { ProfileSection } from '@/components/ProfileSection'
+import { PreferencesSection } from '@/components/PreferencesSection'
+import { NotificationsSection } from '@/components/NotificationsSection'
+import { SecuritySection } from '@/components/SecuritySection'
+import { DeleteAccountSection } from '@/components/DeleteAccountSection'
 
 export default function SettingsPage() {
   const [user, setUser] = useState({

@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Header } from '../components/Header'
-import { ProgressBar } from '../components/ProgressBar'
-import { StatusMessage } from '../components/StatusMessage'
+
+import { Header } from '@/components/Header'
+import { ProgressBar } from '@/components/ProgressBar'
+import { StatusMessage } from '@/components/StatusMessage'
 
 const stages = [
   { id: 'generating', name: 'Generando voces', duration: 5000 },

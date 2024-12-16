@@ -1,12 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { Header } from '../components/Header'
-import { AudioPlayer } from '../components/AudioPlayer'
-import { DownloadButton } from '../components/DownloadButton'
-import { TranscriptAccordion } from '../components/TranscriptAccordion'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+
+import { Header } from '@/components/Header'
+import { AudioPlayer } from '@/components/AudioPlayer'
+import { DownloadButton } from '@/components/DownloadButton'
+import { TranscriptAccordion } from '@/components/TranscriptAccordion'
+import { Button } from '@/components/ui/button'
 
 // Datos de ejemplo (en una aplicación real, estos vendrían de una API o base de datos)
 const audioUrl = '/path/to/processed/audio.mp3'

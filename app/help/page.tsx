@@ -1,7 +1,7 @@
-import { Header } from '../components/Header'
-import { FAQSection } from '../components/FAQSection'
-import { ContactInfo } from '../components/ContactInfo'
-import { BackToHomeButton } from '../components/BackToHomeButton'
+import { Header } from '@/components/Header'
+import { FAQSection } from '@/components/FAQSection'
+import { ContactInfo } from '@/components/ContactInfo'
+import { BackToHomeButton } from '@/components/BackToHomeButton'
 
 export default function HelpPage() {
   return (

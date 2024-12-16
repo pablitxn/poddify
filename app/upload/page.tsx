@@ -1,11 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { UploadHeader } from '../components/UploadHeader'
-import { Dropzone } from '../components/Dropzone'
-import { LanguageSelector } from '../components/LanguageSelector'
-import { ProcessButton } from '../components/ProcessButton'
-import { ErrorMessage } from '../components/ErrorMessage'
+
+import { UploadHeader } from '@/components/UploadHeader'
+import { Dropzone } from '@/components/Dropzone'
+import { LanguageSelector } from '@/components/LanguageSelector'
+import { ProcessButton } from '@/components/ProcessButton'
+import { ErrorMessage } from '@/components/ErrorMessage'
 
 export default function UploadPage() {
   const [file, setFile] = useState<File | null>(null)

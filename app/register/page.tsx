@@ -3,11 +3,11 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Eye, EyeOff } from 'lucide-react'
-import { Header } from '../components/Header'
-import { GoogleOAuthButton } from '../components/GoogleOAuthButton'
+import { Header } from '@/components/Header'
+import { GoogleOAuthButton } from '@/components/GoogleOAuthButton'
 
 export default function RegisterPage() {
   const [name, setName] = useState('')

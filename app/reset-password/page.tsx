@@ -3,9 +3,10 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+
+import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Header } from '../components/Header'
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState('')

@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { Header } from '../components/Header'
-import { ProjectList } from '../components/ProjectList'
-import { Pagination } from '../components/Pagination'
+
+import { Header } from '@/components/Header'
+import { ProjectList } from '@/components/ProjectList'
+import { Pagination } from '@/components/Pagination'
 
 // Datos de ejemplo (en una aplicación real, estos vendrían de una API o base de datos)
 const projectsData = [

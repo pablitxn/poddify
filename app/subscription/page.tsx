@@ -1,14 +1,15 @@
 'use client'
 
 import { useState } from 'react'
-import { Header } from '../components/Header'
-import { CurrentSubscription } from '../components/subscription/CurrentSubscription'
-import { PlanSelector } from '../components/subscription/PlanSelector'
-import { PaymentMethod } from '../components/subscription/PaymentMethod'
-import { BillingHistory } from '../components/subscription/BillingHistory'
-import { UsageStats } from '../components/subscription/UsageStats'
+
+import { Header } from '@/components/Header'
+import { CurrentSubscription } from '@/components/CurrentSubscription'
+import { PlanSelector } from '@/components/PlanSelector'
+import { PaymentMethod } from '@/components/PaymentMethod'
+import { BillingHistory } from '@/components/BillingHistory'
+import { UsageStats } from '@/components/UsageStats'
+import { ErrorMessage } from '@/components/ErrorMessage'
 import { Button } from '@/components/ui/button'
-import { ErrorMessage } from '../components/ErrorMessage'
 
 export default function SubscriptionPage() {
   const [error, setError] = useState<string | null>(null)
