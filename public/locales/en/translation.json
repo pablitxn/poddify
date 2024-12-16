@@ -3,6 +3,56 @@
   "greeting": "Hello, {{name}}!",
   "buttons": {
     "save": "Save",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "back": "Back",
+    "login": "Log In",
+    "register": "Sign Up",
+    "startFree": "Start Free"
+  },
+  "auth": {
+    "login": {
+      "title": "Log In",
+      "subtitle": "Welcome back, translate and customize your podcasts",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot your password?",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join Poddify and start transforming your podcasts",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Translate and Customize your Podcast Instantly",
+      "subtitle": "Transcribe, translate, assign voices and download the final result"
+    },
+    "features": {
+      "transcription": {
+        "title": "Transcription with Deepgram",
+        "description": "Transcribe your audio with precision using cutting-edge technology"
+      },
+      "translation": {
+        "title": "Translation with OpenAI",
+        "description": "Translate your content to multiple languages while maintaining context"
+      },
+      "tts": {
+        "title": "TTS with ElevenLabs",
+        "description": "Generate natural and customized voices for your content"
+      },
+      "editing": {
+        "title": "Custom Editing",
+        "description": "Adjust and perfect your translated audio before final delivery"
+      }
+    }
   }
 } 

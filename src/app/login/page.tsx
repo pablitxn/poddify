@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 import { Eye, EyeOff } from 'lucide-react'
 
@@ -11,6 +12,7 @@ import { Header } from '@/components/Header'
 import { GoogleOAuthButton } from '@/components/GoogleOAuthButton'
 
 export default function LoginPage() {
+  const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -21,14 +23,12 @@ export default function LoginPage() {
     e.preventDefault()
     setError('')
     try {
-      // Here you would typically make an API call to your backend
       const response = await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       })
       if (response.ok) {
-        // Redirect to the main app page on successful login
         router.push('/upload')
       } else {
         setError('Credenciales incorrectas, intenta nuevamente.')
@@ -41,14 +41,14 @@ export default function LoginPage() {
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
       <Header 
-        title="Iniciar Sesión" 
-        subtitle="Bienvenido de vuelta, traduce y personaliza tus podcasts"
+        title={t('auth.login.title')}
+        subtitle={t('auth.login.subtitle')}
       />
       <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
         <div className="space-y-4">
           <Input
             type="email"
-            placeholder="Email"
+            placeholder={t('auth.login.email')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="bg-background/50 backdrop-blur-sm border-primary/50 focus:border-primary"
@@ -56,7 +56,7 @@ export default function LoginPage() {
           <div className="relative">
             <Input
               type={showPassword ? 'text' : 'password'}
-              placeholder="Contraseña"
+              placeholder={t('auth.login.password')}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="bg-background/50 backdrop-blur-sm border-primary/50 focus:border-primary pr-10"
@@ -72,17 +72,17 @@ export default function LoginPage() {
         </div>
         {error && <p className="text-pink-500">{error}</p>}
         <Button type="submit" className="w-full">
-          Iniciar Sesión
+          {t('buttons.login')}
         </Button>
         <GoogleOAuthButton />
         <div className="text-center space-y-2">
           <Link href="/forgot-password" className="text-primary hover:underline">
-            ¿Olvidaste tu contraseña?
+            {t('auth.login.forgotPassword')}
           </Link>
           <p>
-            ¿No tienes cuenta?{' '}
+            {t('auth.login.noAccount')}{' '}
             <Link href="/register" className="text-primary hover:underline">
-              Regístrate
+              {t('auth.login.signUp')}
             </Link>
           </p>
         </div>
