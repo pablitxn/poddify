@@ -1,6 +1,6 @@
 'use client'
 
-import { useTranslation } from 'react-i18next'
+import {useTranslations} from 'next-intl';
 import Link from 'next/link'
 import { Mic, Globe, Speaker, Download } from 'lucide-react'
 
@@ -11,7 +11,7 @@ import { FeaturesSection } from '@/components/FeaturesSection'
 import { ExamplesSection } from '@/components/ExamplesSection'
 
 export default function Home() {
-  const { t } = useTranslation()
+  const t  = useTranslations()
 
   const features = [
     {

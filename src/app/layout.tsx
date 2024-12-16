@@ -6,6 +6,9 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import { AuthProvider } from '@/components/AuthProvider'
 
 import './globals.css'
+import {routing} from "@/i18n/routing";
+import {getMessages} from "next-intl/server";
+import {NextIntlClientProvider} from "next-intl";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,11 +17,20 @@ export const metadata = {
   description: 'Traduce y re-sintetiza tu audio con IA',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: {locale}
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  params: {locale: string};
+
 }) {
+  if (!routing.locales.includes(locale as any)) {
+    // notFound();
+  }
+  const messages = await getMessages();
+
+
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={inter.className}>
@@ -27,7 +39,9 @@ export default function RootLayout({
             <div className="flex flex-col min-h-screen">
               <Navigation />
               <main className="flex-grow container mx-auto px-4 pt-20 pb-8">
-                {children}
+                <NextIntlClientProvider messages={messages}>
+                  {children}
+                </NextIntlClientProvider>
               </main>
               <Footer />
             </div>
